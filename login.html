@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form name="loginform" id="loginform" action="http://localhost/wordpress/wp-login.php" method="post">
+    <p>
+        <label for="user_login">Username<br>
+        <input type="text" name="log" id="user_login" class="input" value="" size="20"></label>
+    </p>
+    <p>
+        <label for="user_pass">Password<br>
+        <input type="password" name="pwd" id="user_pass" class="input" value="" size="20"></label>
+    </p>
+<!--
+   wsl_render_login_form
+   WordPress Social Login Plugin ( WordPress Social Login 2.0.3 ) 
+   http://wordpress.org/extend/plugins/wordpress-social-login/
+-->
+<style>
+#wp-social-login-connect-with {font-weight: bold;}
+#wp-social-login-connect-options {padding:10px;}
+#wp-social-login-connect-options a {text-decoration: none;}
+#wp-social-login-connect-options img {border:0 none;}
+.wsl_connect_with_provider {}</style>
+    <span id="wp-social-login-connect-with">Connect with:</span>
+    <div id="wp-social-login-connect-options">
+                <a href="http://localhost/wordpress/wp-content/plugins/wordpress-social-login/services/authenticate.php?provider=Facebook&amp;redirect_to=http%3A%2F%2Flocalhost%2Fwordpress%2Fwp-login.php" title="Connect with Facebook" class="wsl_connect_with_provider">
+                    <img alt="Facebook" title="Facebook" src="http://localhost/wordpress/wp-content/plugins/partie-privee/facebook.png">
+                </a>
+                                <a href="http://localhost/wordpress/wp-content/plugins/wordpress-social-login/services/authenticate.php?provider=Google&amp;redirect_to=http%3A%2F%2Flocalhost%2Fwordpress%2Fwp-login.php" title="Connect with Google" class="wsl_connect_with_provider">
+                    <img alt="Google" title="Google" src="http://localhost/wordpress/wp-content/plugins/partie-privee/google.png">
+                </a>
+                        <input id="wsl_popup_base_url" type="hidden" value="http://localhost/wordpress/wp-content/plugins/wordpress-social-login/services/authenticate.php?">
+        <input type="hidden" id="wsl_login_form_uri" value="http://localhost/wordpress/wp-login.php">
+    </div> 
+<!-- /wsl_render_login_form -->
+
+    <p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"> Remember Me</label></p>
+    <p class="submit">
+        <input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Log In">
+        <input type="hidden" name="redirect_to" value="http://localhost/wordpress/wp-admin/">
+        <input type="hidden" name="testcookie" value="1">
+    </p>
+</form>
+<body>
+</html>
